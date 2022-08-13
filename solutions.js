@@ -130,3 +130,59 @@ function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise
   return Math.sqrt(sq) % 1 == 0 ? Math.pow(Math.sqrt(sq) + 1 , 2) : -1;
 };
+
+// 20) Vowel Count
+function getCount(str) {
+    return str.match(/[aeiou]/gi) == null ? 0 : str.match(/[aeiou]/gi).length ;
+}
+
+// 21) Is this a triangle?
+function isTriangle(a,b,c)
+{
+    return a + b > c && a + c > b && b + c > a; 
+ }
+
+// 22) String ends with?
+function solution(str, ending){
+    // TODO: complete
+    return str.endsWith(ending)
+  }
+
+// 23) Odd or Even?
+function oddOrEven(array) {
+   //enter code here
+  return array.length == 0 ? 'even' : array.reduce((acc,value) => acc + value) % 2 == 0 ? 'even' : 'odd';
+}
+
+// 24) Reverse words
+function reverseWords(str) {
+    // Go for it
+    return str.split('').reverse().join('').split(' ').reverse().join(' ');
+  }
+
+// 25) Sum of the first nth term of Series
+function SeriesSum(n)
+{
+  // Happy Coding ^_^
+  let count = 0;
+    for(let j = 1; j <= n * 3; j += 3){
+       count += 1 / j
+      console.log(count)
+  }return count.toFixed(2) + ''
+}
+
+// 26) The highest profit wins!
+function minMax(arr){
+    return [Math.min(...arr) , Math.max(...arr)]; // fix me!
+}
+
+// 27) Area of an arrow
+function arrowArea(a,b) {
+  // your code
+  return a * b/4
+}
+
+// 28) Small enough? - Beginner
+function smallEnough(a, limit){
+  return a.filter(num => num > limit).length == 0;
+}
